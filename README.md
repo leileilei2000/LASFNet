@@ -1,2 +1,2 @@
 # LASFNet
-LASFNet将在未来不久后开源
+LASFNet将在不久后开源
