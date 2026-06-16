@@ -4,6 +4,14 @@ Official implementation of the paper **"LASFNet: a lightweight attention-guided 
 
 LASFNet is a lightweight multimodal object detection framework that fuses RGB and infrared (IR) features via an attention-guided self-modulation mechanism. It builds upon the YOLOv5 architecture and introduces a novel **attention-guided self-modulation feature fusion (ASFF)** module for effective cross-modal feature fusion.
 
+## Graphical Abstract
+
+![Graphical_abstract](Graphical_abstract.jpg)
+
+## Network Architecture
+
+![LASFNet Architecture](LASFNet1.png)
+
 ---
 
 ## Supported Datasets
@@ -12,14 +20,8 @@ LASFNet is a lightweight multimodal object detection framework that fuses RGB an
 |---------|-------------|---------|
 | LLVIP | `data/LLVIP.yaml` | person |
 | M3FD | `data/M3FD_new.yaml` | people, car, bus, lamp, motorcycle, truck |
-| FLIR | `data/FLIR.yaml` | person, car, bicycle |
-| KAIST | `data/KAIST.yaml` | person |
 | DroneVehicle | `data/DroneVehicle_new.yaml` | car, freight car, truck, bus, van |
 | VTUAV-det | `data/VTUAV_det.yaml` | person |
-| RGBTDronePerson | `data/RGBTDronePerson.yaml` | crowd, person, rider, uncertain |
-| VEDAI (SRvedai) | `data/SRvedai.yaml` | car, pickup, camping, truck, other, tractor, boat, van |
-| ODinMJ | `data/OD.yaml` | person |
-| Drone-obb / Drone1 / Drone | `data/drone-obb.yaml`, `data/drone1.yaml`, `data/drone.yaml` | car, truck, bus, van, freight car |
 
 ---
 
