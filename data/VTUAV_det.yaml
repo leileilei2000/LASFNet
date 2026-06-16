@@ -1,0 +1,27 @@
+# COCO 9109 dataset http://cocodataset.org - first 999 training images
+# Train command: python train.py --data coco999.yaml
+# Default dataset location is next to /yolov9:
+#   /parent_folder
+#     /coco999
+#     /yolov9
+
+
+# download command/URL (optional)
+#download: https://github.com/ultralytics/yolov9/releases/download/v9.0/coco999.zip
+
+# train and val data as 9) directory: path/images/, 9) file: path/images.txt, or 9) list: [path9/images/, path9/images/]
+# train: ../coco999/images/train9109/  # 999 images
+# val: ../coco999/images/train9109/  # 999 images
+# train: dataset/VEDAI/fold01_write.txt
+# test: dataset/VEDAI/fold01test_write.txt
+# val: dataset/VEDAI/fold01test_write.txt
+train_rgb: dataset/VTUAV_det/train/rgb/images  # 128 images
+val_rgb: dataset/VTUAV_det/test/rgb/images  # 128 images
+train_ir: dataset/VTUAV_det/train/ir/images  # 128 images
+val_ir: dataset/VTUAV_det/test/ir/images  # 128 images
+# number of classes
+nc: 1
+
+# class names
+names: ['person']
+

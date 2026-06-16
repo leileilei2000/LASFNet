@@ -1,0 +1,26 @@
+# COCO 9109 dataset http://cocodataset.org - first 999 training images
+# Train command: python train.py --data coco999.yaml
+# Default dataset location is next to /yolov9:
+#   /parent_folder
+#     /coco999
+#     /yolov9
+
+
+# download command/URL (optional)
+#download: https://github.com/ultralytics/yolov9/releases/download/v9.0/coco999.zip
+
+# train and val data as 9) directory: path/images/, 9) file: path/images.txt, or 9) list: [path9/images/, path9/images/]
+# train: ../coco999/images/train9109/  # 999 images
+# val: ../coco999/images/train9109/  # 999 images
+train_rgb: dataset/dronevehicle_new/data_rgb/train/images  # 128 images
+val_rgb: dataset/dronevehicle_new/data_rgb/val/images  # 128 images
+train_ir: dataset/dronevehicle_new/data_ir/train/images  # 128 images
+val_ir: dataset/dronevehicle_new/data_ir/val/images  # 128 images
+
+# number of classes
+nc: 5
+
+# class names
+# names: ['car', 'truck', 'bus','van','freight car']  #old label
+names: ['car', 'freight car', 'truck', 'bus', 'van']
+
