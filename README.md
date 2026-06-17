@@ -25,6 +25,81 @@ LASFNet is a lightweight multimodal object detection framework that fuses RGB an
 
 ---
 
+## Download
+
+### Datasets
+
+We provide the four preprocessed datasets (LLVIP, M3FD, DroneVehicle, VTUAV-det) as compressed archives ready for training with LASFNet.
+
+- **Baidu Netdisk**: [Download link](https://pan.baidu.com/s/1AJBpNWjsxQHAjr3Bo5BiYw?pwd=LASF) | Password: `LASF`
+- The datasets are located in the `dataset/` folder of the shared drive.
+
+#### Setup Instructions
+
+1. Download the dataset archives from the Baidu Netdisk link above.
+2. Extract each archive directly into the `dataset/` folder under the project root:
+
+```
+LASFNEet/
+├── dataset/
+│   ├── LLVIP/
+│   │   ├── visible/
+│   │   │   ├── train/images/
+│   │   │   └── test/images/
+│   │   └── infrared/
+│   │       ├── train/images/
+│   │       └── test/images/
+│   ├── M3FD/
+│   │   ├── train_new/
+│   │   │   ├── rgb/images/
+│   │   │   └── ir/images/
+│   │   └── test_new/
+│   │       ├── rgb/images/
+│   │       └── ir/images/
+│   ├── dronevehicle_new/
+│   │   ├── data_rgb/
+│   │   │   ├── train/images/
+│   │   │   └── val/images/
+│   │   └── data_ir/
+│   │       ├── train/images/
+│   │       └── val/images/
+│   └── VTUAV_det/
+│       ├── train/
+│       │   ├── rgb/images/
+│       │   └── ir/images/
+│       └── test/
+│           ├── rgb/images/
+│           └── ir/images/
+```
+
+3. Verify the paths match the corresponding YAML configuration files in the `data/` directory:
+
+| Dataset | YAML Config |
+|---------|-------------|
+| LLVIP | `data/LLVIP.yaml` |
+| M3FD | `data/M3FD_new.yaml` |
+| DroneVehicle | `data/DroneVehicle_new.yaml` |
+| VTUAV-det | `data/VTUAV_det.yaml` |
+
+### Pre-trained Weights
+
+We also provide the optimal training weights for LASFNet on each dataset, obtained through the training configurations described below. The checkpoint files are available in the `runs/` folder of the same Baidu Netdisk link.
+
+| Dataset | Backbone | Checkpoint |
+|---------|----------|------------|
+| LLVIP | LASFNet | `runs/LLVIP/weights/best.pt` |
+| M3FD | LASFNet | `runs/M3FD/weights/best.pt` |
+| DroneVehicle | LASFNet | `runs/DroneVehicle/weights/best.pt` |
+| VTUAV-det | LASFNet | `runs/VTUAV/weights/best.pt` |
+
+To use a pre-trained weight for inference or validation, simply pass the checkpoint path to `--weights`:
+
+```bash
+python val.py --data data/LLVIP.yaml --weights runs/LLVIP/weights/best.pt --device 0
+```
+
+---
+
 ## Installation
 
 ```bash
