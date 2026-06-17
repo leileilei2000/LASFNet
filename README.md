@@ -81,6 +81,15 @@ LASFNEet/
 | DroneVehicle | `data/DroneVehicle_new.yaml` |
 | VTUAV-det | `data/VTUAV_det.yaml` |
 
+> ⚠️ **Important**: If you use any of the datasets provided in this repository, you must **cite the original papers** of the respective dataset authors. Please refer to the publications listed below for proper citation.
+>
+> | Dataset | Original Paper |
+> |---------|---------------|
+> | LLVIP | Jia et al., "LLVIP: A Visible-infrared Paired Dataset for Low-light Vision," ICCVW 2021 |
+> | M3FD | Liu et al., "Target-aware Dual Adversarial Learning and a Multi-scenario Multi-Modality Benchmark to Fuse Infrared and Visible for Object Detection," CVPR 2022 |
+> | DroneVehicle | Sun et al., "Drone-based RGB-Infrared Cross-Modality Vehicle Detection via Uncertainty-Aware Learning," TCSVT 2022 |
+> | VTUAV-det | Zhang et al., "Drone-based RGBT tiny person detection," ISPRS 2023 |
+
 ### Pre-trained Weights
 
 We also provide the optimal training weights for LASFNet on each dataset, obtained through the training configurations described below. The checkpoint files are available in the `runs/` folder of the same Baidu Netdisk link.
